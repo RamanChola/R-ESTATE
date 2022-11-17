@@ -1,12 +1,10 @@
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import Card from "./components/Card";
-import Navbar from "./components/Navbar";
+import React from "react";
+import Navbar from "../components/Navbar";
+import Card from "../components/Card";
 import Grid from "@mui/material/Unstable_Grid2";
 import Typography from '@mui/material/Typography';
 
-export default function Home() {
+const Buy = () => {
   let data = [
     {
       title: "Lizard",
@@ -38,8 +36,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <h1>Top Projects</h1>
-      <hr/>
+      <h1>Properties For You</h1>
       <Grid container>
         {data.map((e) => {
           return <Card props={{ e }} />;
@@ -47,4 +44,6 @@ export default function Home() {
       </Grid>
     </>
   );
-}
+};
+
+export default Buy;
