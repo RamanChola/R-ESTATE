@@ -4,6 +4,7 @@ import Card from "../components/Card";
 import Grid from "@mui/material/Unstable_Grid2";
 import Typography from '@mui/material/Typography';
 import data from "../../data";
+import Footer from "../components/Footer"
 
 const Buy = () => {
   
@@ -16,6 +17,7 @@ const Buy = () => {
           return <Card props={{ e }} />;
         })}
       </Grid>
+      <Footer/>
     </>
   );
 };
