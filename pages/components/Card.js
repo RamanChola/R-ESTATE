@@ -7,7 +7,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
 export default function ImgMediaCard({ props }) {
-  console.log(props);
+  // console.log(props);
   return (
     <Card style={{ margin: 20 }} sx={{ maxWidth: 320, minWidth: 320 }}>
       <CardMedia
@@ -24,9 +24,9 @@ export default function ImgMediaCard({ props }) {
           {props.e.content}
         </Typography>
       </CardContent>
-      <CardActions>
+      <CardActions >
         <p style={{ margin: "3px", fontWeight: "bold" }}>{props.e.price}</p>
-        <Button style={{ marginLeft: "auto" }} size="small">
+        <Button style={{ marginLeft: "auto"}} size="small">
           View Details
         </Button>
       </CardActions>
