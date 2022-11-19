@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer"
 import { useState } from "react";
 // import { uploadFileToIPFS, uploadJSONToIPFS } from "../pinata";
 // import Marketplace from "../Marketplace.json";
@@ -94,13 +95,14 @@ export default function SellNFT() {
 
   // console.log("Working", process.env);
   return (
-    <div className="">
-      <Navbar></Navbar>
+    <>
+      <Navbar/>
       <div className="flex flex-col place-items-center mt-10" id="nftForm">
         <form className="bg-white shadow-md rounded px-8 pt-4 pb-8 mb-4">
-          <h3 className="text-center font-bold text-purple-500 mb-8">
+          <h3 className="text-center font-bold text-purple-500 mb-4">
             Upload your property details to chain
           </h3>
+          <hr/>
           <div className="mb-4">
             <label
               className="block text-purple-500 text-sm font-bold mb-2"
@@ -176,6 +178,7 @@ export default function SellNFT() {
           </button>
         </form>
       </div>
-    </div>
+      <Footer/>
+    </>
   );
 }
