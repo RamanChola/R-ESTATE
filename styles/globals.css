@@ -4,6 +4,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
 }
 
 * {
@@ -23,7 +24,45 @@ h1 {
 }
 
 hr {
-  width:12%;
-  margin: 0 auto 0 0;
-  border: 1px solid red;
+  width: 25%;
+  height: 1px;
+  border-width: 0;
+  background-color: #c83cb9 !important;
+}
+
+.banner-card {
+  width: 100vw;
+  margin-bottom: 3vh;
+  position: relative;
+  height: 70vh;
+}
+
+.banner-img {
+  height: 70vh;
+  width: 100%;
+}
+
+.banner-content {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0) 100%)
+}
+
+.banner-title {
+  position: absolute;
+  top: 45vh;
+  left: 5vw;
+  color: white;
+  font-size: 45px;
+}
+
+.banner-text {
+  position: absolute;
+  color: white;
+  top: 55vh;
+  height: 4.5rem;
+  margin-left: 5vw;
 }

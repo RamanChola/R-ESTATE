@@ -1,15 +1,11 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Card from "../components/Card";
+import Card from "./Card";
 import Grid from "@mui/material/Unstable_Grid2";
-import Typography from "@mui/material/Typography";
 import dataSet from "../../data";
-import Footer from "../components/Footer";
 
-const Buy = () => {
+const Body = () => {
   return (
     <>
-      <Navbar />
       <div
         style={{
           display: "flex",
@@ -27,9 +23,8 @@ const Buy = () => {
           return <Card props={{ data }} />;
         })}
       </Grid>
-      <Footer/>
     </>
   );
 };
 
-export default Buy;
+export default Body;

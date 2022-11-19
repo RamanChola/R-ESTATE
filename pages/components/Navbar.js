@@ -39,7 +39,7 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" style={{backgroundColor:"black"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <ApartmentIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
@@ -134,7 +134,7 @@ function Navbar() {
 
           <Box sx={{ flexGrow: 0 }}>
             {!isLoggedIn ? (
-              <Button style={{ color: "black", backgroundColor: "white" }}>
+              <Button style={{ color: "black", backgroundColor: "#ffffff" }}>
                 Connect your Wallet
               </Button>
             ) : (

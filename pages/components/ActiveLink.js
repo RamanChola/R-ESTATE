@@ -5,7 +5,7 @@ function ActiveLink({ children, href }) {
   const style = {
     textDecoration: "none",
     fontSize: "1.1rem",
-    color: router.asPath === href ? "black" : "inherit",
+    color: router.asPath === href ? "#c83cb9" : "#ffffff",
     fontWeight: router.asPath === href ? "bold" : "200",
   };
 
