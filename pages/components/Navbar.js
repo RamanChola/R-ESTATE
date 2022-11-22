@@ -21,7 +21,7 @@ const settings = ["Dashboard"];
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-  const [isLoggedIn, setIsLogged] = React.useState(false);
+  const [isLoggedIn, setIsLogged] = React.useState(true);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -139,15 +139,15 @@ function Navbar() {
               </Button>
             ) : (
               <>
-                <Tooltip title="Open settings">
-                  <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                <Tooltip title="Open profile">
+                  <IconButton /*onClick={handleOpenUserMenu}*/ sx={{ p: 0 }} href='/folio/profile'>
                     <Avatar
                       alt="Remy Sharp"
                       src="/static/images/avatar/2.jpg"
                     />
                   </IconButton>
                 </Tooltip>
-                <Menu
+                {/* <Menu
                   sx={{ mt: "45px" }}
                   id="menu-appbar"
                   anchorEl={anchorElUser}
@@ -168,7 +168,7 @@ function Navbar() {
                       <Typography textAlign="center">{setting}</Typography>
                     </MenuItem>
                   ))}
-                </Menu>
+                </Menu> */}
               </>
             )}
           </Box>

@@ -40,7 +40,7 @@ export default function Footer() {
             <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>
               <i class="fas fa-city"></i>
-                R-Estate
+               {'‎'} R-Estate
               </h6>
               <p>
                 Here you can 
