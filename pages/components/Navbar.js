@@ -37,6 +37,7 @@ function Navbar() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+  
 
   return (
     <AppBar position="static" style={{backgroundColor:"black"}}>

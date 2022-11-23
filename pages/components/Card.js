@@ -26,7 +26,7 @@ export default function ImgMediaCard({ props }) {
       </CardContent>
       <CardActions>
         <p style={{ margin: "3px", fontWeight: "bold" }}>{data.price}</p>
-        <Button style={{ marginLeft: "auto", color:"black", fontWeight:"bold" }} size="small">
+        <Button style={{ marginLeft: "auto", color:"black", fontWeight:"bold" }} size="small" href='/folio/Know'>
           Know more
         </Button>
       </CardActions>

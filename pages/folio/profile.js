@@ -25,11 +25,11 @@ const profile = () => {
       <section className="vh-150" style={{ backgroundColor: "#f4f5f7" }}>
         <MDBContainer className="py-5 h-50">
           <MDBRow className="justify-content-center align-items-center h-100">
-            <MDBCol lg="15" className="mb-4 mb-lg-0">
+            <MDBCol lg="8" className="mb-4 mb-lg-0">
               <MDBCard className="mb-3" style={{ borderRadius: ".5rem" }}>
                 <MDBRow className="g-0">
                   <MDBTypography tag="h1">Marie Horwitz</MDBTypography>
-                  <MDBCardText>##token NO.</MDBCardText>
+                  <MDBCardText>##property NO.</MDBCardText>
                   <MDBCol
                     md="4"
                     className="gradient-custom text-center text-white"
@@ -39,10 +39,10 @@ const profile = () => {
                     }}
                   >
                     <MDBCardImage
-                      src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                      src="https://cdn.myanimelist.net/images/characters/10/352557.jpg"
                       alt="Avatar"
                       className="my-5"
-                      style={{ width: "80px" }}
+                      style={{ width: "200px" ,marginLeft:'15px' }}
                       fluid
                     />
                   </MDBCol>
