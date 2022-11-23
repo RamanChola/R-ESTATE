@@ -37,10 +37,9 @@ function Navbar() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-  
 
   return (
-    <AppBar position="static" style={{backgroundColor:"black"}}>
+    <AppBar position="static" style={{ backgroundColor: "black" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <ApartmentIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
@@ -141,12 +140,14 @@ function Navbar() {
             ) : (
               <>
                 <Tooltip title="Open profile">
-                  <IconButton /*onClick={handleOpenUserMenu}*/ sx={{ p: 0 }} href='/folio/profile'>
-                    <Avatar
-                      alt="Remy Sharp"
-                      src="/static/images/avatar/2.jpg"
-                    />
-                  </IconButton>
+                  <ActiveLink href="/folio/profile">
+                    <IconButton sx={{ p: 0 }}>
+                      <Avatar
+                        alt="Remy Sharp"
+                        src="/static/images/avatar/2.jpg"
+                      />
+                    </IconButton>
+                  </ActiveLink>
                 </Tooltip>
                 {/* <Menu
                   sx={{ mt: "45px" }}
