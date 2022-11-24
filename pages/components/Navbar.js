@@ -14,6 +14,7 @@ import MenuItem from "@mui/material/MenuItem";
 import ApartmentIcon from "@mui/icons-material/Apartment";
 import Link from "next/link";
 import ActiveLink from "./ActiveLink";
+import WalletConnect from "./WalletConnect";
 
 const pages = ["Buy", "Sell"];
 const settings = ["Dashboard"];
@@ -21,7 +22,7 @@ const settings = ["Dashboard"];
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-  const [isLoggedIn, setIsLogged] = React.useState(true);
+  const [isLoggedIn, setIsLogged] = React.useState(false);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -135,9 +136,9 @@ function Navbar() {
 
           <Box sx={{ flexGrow: 0 }}>
             {!isLoggedIn ? (
-              <Button style={{ color: "black", backgroundColor: "#ffffff" }}>
-                Connect your Wallet
-              </Button>
+              <div>
+                  <WalletConnect setIsLogged={setIsLogged} />
+              </div>
             ) : (
               <>
                 <Tooltip title="Open profile">
