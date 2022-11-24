@@ -27,7 +27,7 @@ const profile = () => {
           <MDBRow className="justify-content-center align-items-center h-100">
             <MDBCol lg="8" className="mb-4 mb-lg-0">
               <MDBCard className="mb-3" style={{ borderRadius: ".5rem" }}>
-                <MDBRow className="g-0">
+                <MDBRow className="g-0" style={{padding:'10px '}}>
                   <MDBTypography tag="h1">Marie Horwitz</MDBTypography>
                   <MDBCardText>##property NO.</MDBCardText>
                   <MDBCol
@@ -41,8 +41,8 @@ const profile = () => {
                     <MDBCardImage
                       src="https://cdn.myanimelist.net/images/characters/10/352557.jpg"
                       alt="Avatar"
-                      className="my-5"
-                      style={{ width: "200px" ,marginLeft:'15px' }}
+                      className="my-5 "
+                      style={{ width: "200px" ,marginLeft:'30px' }}
                       fluid
                     />
                   </MDBCol>

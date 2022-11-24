@@ -5,6 +5,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import Link from "next/link";
 
 export default function ImgMediaCard({ props }) {
   const data = { props }.props.data;
@@ -26,9 +27,9 @@ export default function ImgMediaCard({ props }) {
       </CardContent>
       <CardActions>
         <p style={{ margin: "3px", fontWeight: "bold" }}>{data.price}</p>
-        <Button style={{ marginLeft: "auto", color:"black", fontWeight:"bold" }} size="small" href='/folio/Know'>
+        <Link style={{ marginLeft: "auto", color:"black", fontWeight:"bold" }} size="small" href='/folio/Know'>
           Know more
-        </Button>
+        </Link>
       </CardActions>
     </Card>
   );
