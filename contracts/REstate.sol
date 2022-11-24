@@ -58,7 +58,7 @@ contract REstate is ERC721URIStorage {
     }
 
     function createToken(string memory tokenURI, uint256 price, string memory _name) public payable returns(uint){
-        require(msg.value == listPrice, "Send enough ether to list");
+        require(msg.value >= listPrice, "Send enough ether to list");
         require(price > 0, "Make sure the price ins't negative");
 
         _propertyIds.increment();
