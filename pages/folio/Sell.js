@@ -55,21 +55,31 @@ export default function SellNFT() {
         );
 
         //massage the params to be sent to the create NFT request
-        const price = ethers.utils.parseUnits(formParams.price, "ether");
+        const price = ethers.utils.parseUnits(
+          formParams.price.toString(),
+          "ether"
+        );
         let listingPrice = await contract.getListPrice();
         listingPrice = listingPrice.toString();
 
         //actually create the NFT
-        let transaction = await contract.createToken(metadata.url, price, {
-          value: listingPrice,
-        });
+        console.log(listingPrice);
+        let transaction = await contract.createToken(
+          metadata.url,
+          price,
+          description,
+          name,
+          {
+            value: listingPrice,
+          }
+        );
         await transaction.wait();
 
         alert("Successfully listed your NFT!");
         updateMessage("");
         updateFormParams({ name: "", description: "", price: "" });
       } catch (e) {
-        alert("Upload error: " + e);
+        console.log("Upload error: " + e);
       }
     } catch (error) {
       console.log("Error uploading file: ", error);
