@@ -21,8 +21,34 @@ import {
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { contractABI, contractAddress } from "../../utils/constants";
 
 const Know = () => {
+  // React.useEffect(async () => {
+  //   try {
+  //     const ethers = require("ethers");
+  //     //After adding your Hardhat network to your metamask, this code will get providers and signers
+  //     const provider = new ethers.providers.Web3Provider(window.ethereum);
+  //     const signer = provider.getSigner();
+  //     const contract = new ethers.Contract(
+  //       contractAddress,
+  //       contractABI,
+  //       signer
+  //     );
+  //     const salePrice = ethers.utils.parseUnits(data.price, "ether");
+  //     updateMessage("Buying the NFT... Please Wait (Upto 5 mins)");
+  //     //run the executeSale function
+  //     let transaction = await contract.executeSale(data.tokenId, {
+  //       value: salePrice,
+  //     });
+  //     await transaction.wait();
+
+  //     alert("You successfully bought the NFT!");
+  //     updateMessage("");
+  //   } catch (e) {
+  //     alert("Upload Error" + e);
+  //   }
+  // });
   return (
     <>
       <Navbar />
@@ -128,5 +154,4 @@ const Know = () => {
     </>
   );
 };
-
 export default Know;

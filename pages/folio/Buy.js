@@ -2,11 +2,9 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Card from "../components/Card";
 import Grid from "@mui/material/Unstable_Grid2";
-import Typography from "@mui/material/Typography";
-import dataSet from "../../data";
 import Footer from "../components/Footer";
 import { ethers } from "ethers";
-import { contractABI, contractAddress } from "../../utils/constants.js";
+import { contractABI, contractAddress } from "../../utils/constants";
 
 const Buy = () => {
   const [data, updateData] = React.useState();
@@ -34,6 +32,7 @@ const Buy = () => {
       currentlyListed: property.currentlyListed,
       tokenId: property.tokenId,
       name: property.name,
+      description: property.description,
       price: parseInt(property.price._hex) / 10 ** 18,
     }));
 

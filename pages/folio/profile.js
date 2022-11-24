@@ -16,8 +16,43 @@ import Grid from "@mui/material/Unstable_Grid2";
 import Typography from "@mui/material/Typography";
 import dataSet from "../../data";
 import Card from "../components/Card";
+import { ethers } from "ethers";
+import { contractABI, contractAddress } from "../../utils/constants.js";
 
 const profile = () => {
+  const [data, updateData] = React.useState();
+  const [dataFetched, updateFetched] = React.useState(false);
+  const getEthereumContract = () => {
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    const signer = provider.getSigner();
+    const RestateContract = new ethers.Contract(
+      contractAddress,
+      contractABI,
+      signer
+    );
+
+    return RestateContract;
+  };
+
+  const getMyPropertys = async () => {
+    if (!window.ethereum) return alert("Please install a wallet");
+    const RestateContract = getEthereumContract();
+    const availablePropertys = await RestateContract.getMyPropertys();
+    console.log(availablePropertys + "available");
+    const structuredPropertys = availablePropertys.map((property) => ({
+      owner: property.owner,
+      seller: property.seller,
+      currentlyListed: property.currentlyListed,
+      tokenId: property.tokenId,
+      name: property.name,
+      price: parseInt(property.price._hex) / 10 ** 18,
+    }));
+
+    console.log(structuredPropertys);
+    updateFetched(true);
+    updateData(structuredPropertys);
+  };
+  if (!dataFetched) getMyPropertys();
   return (
     <>
       <Navbar />
@@ -27,7 +62,7 @@ const profile = () => {
           <MDBRow className="justify-content-center align-items-center h-100">
             <MDBCol lg="8" className="mb-4 mb-lg-0">
               <MDBCard className="mb-3" style={{ borderRadius: ".5rem" }}>
-                <MDBRow className="g-0" style={{padding:'10px '}}>
+                <MDBRow className="g-0" style={{ padding: "10px " }}>
                   <MDBTypography tag="h1">Marie Horwitz</MDBTypography>
                   <MDBCardText>##property NO.</MDBCardText>
                   <MDBCol
@@ -42,7 +77,7 @@ const profile = () => {
                       src="https://cdn.myanimelist.net/images/characters/10/352557.jpg"
                       alt="Avatar"
                       className="my-5 "
-                      style={{ width: "200px" ,marginLeft:'30px' }}
+                      style={{ width: "200px", marginLeft: "30px" }}
                       fluid
                     />
                   </MDBCol>
@@ -108,9 +143,10 @@ const profile = () => {
       <h1>Your Properties</h1>
       <hr />
       <Grid container style={{ display: "flex", justifyContent: "center" }}>
-        {dataSet.map((data) => {
-          return <Card props={{ data }} />;
-        })}
+        {data &&
+          data.map((value, index) => {
+            return <Card data={value} key={index} />;
+          })}
       </Grid>
       <Footer />
     </>

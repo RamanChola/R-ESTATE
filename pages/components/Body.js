@@ -32,6 +32,7 @@ const Body = () => {
       currentlyListed: property.currentlyListed,
       tokenId: property.tokenId,
       name: property.name,
+      description: property.description,
       price: parseInt(property.price._hex) / 10 ** 18,
     }));
 
