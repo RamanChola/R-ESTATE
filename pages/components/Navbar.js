@@ -22,7 +22,7 @@ const settings = ["Dashboard"];
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-  const [isLoggedIn, setIsLogged] = React.useState(false);
+  const [isLoggedIn, setIsLogged] = React.useState(null);
 
   async function getAddress() {
     const ethers = require("ethers");
@@ -45,7 +45,7 @@ function Navbar() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-
+  
   
 
   return (

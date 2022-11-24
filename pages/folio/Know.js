@@ -58,15 +58,14 @@ const Know = () => {
             <MDBCol lg="4">
               <MDBCard>
                 <MDBCardImage
-                  src="https://mdbootstrap.com/img/new/standard/nature/184.webp"
+                  src="https://images.adsttc.com/media/images/5ecd/d41d/b357/6516/5600/00e4/slideshow/02A.jpg?1590547473"
                   position="top"
                   alt="..."
                 />
                 <MDBCardBody>
-                  <MDBCardTitle>Card title</MDBCardTitle>
+                  <MDBCardTitle>Uttam Nagar Houses By Aggarwal </MDBCardTitle>
                   <MDBCardText>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                  Uttam Nagar, New Delhi
                   </MDBCardText>
                 </MDBCardBody>
               </MDBCard>
@@ -104,7 +103,7 @@ const Know = () => {
                                 <p>
                                   <h3>
                                     <a href="#!" className="text-dark">
-                                      Antilia
+                                    Uttam Nagar Houses
                                     </a>
                                   </h3>
                                 </p>

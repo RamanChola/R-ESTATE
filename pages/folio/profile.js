@@ -63,7 +63,7 @@ const profile = () => {
             <MDBCol lg="8" className="mb-4 mb-lg-0">
               <MDBCard className="mb-3" style={{ borderRadius: ".5rem" }}>
                 <MDBRow className="g-0" style={{ padding: "10px " }}>
-                  <MDBTypography tag="h1">Marie Horwitz</MDBTypography>
+                  <MDBTypography tag="h1">HCS Nature Plus</MDBTypography>
                   <MDBCardText>##property NO.</MDBCardText>
                   <MDBCol
                     md="4"
@@ -74,7 +74,7 @@ const profile = () => {
                     }}
                   >
                     <MDBCardImage
-                      src="https://cdn.myanimelist.net/images/characters/10/352557.jpg"
+                      src="https://i.pinimg.com/originals/a1/c7/10/a1c710b599e8b83e74fef1371653987b.png"
                       alt="Avatar"
                       className="my-5 "
                       style={{ width: "200px", marginLeft: "30px" }}
@@ -108,7 +108,7 @@ const profile = () => {
                         <MDBCol size="6" className="mb-3">
                           <MDBTypography tag="h6">ABOUT ME</MDBTypography>
                           <MDBCardText className="text-muted">
-                            hbd j scsncjndmv jscdv sdvn.
+                          Chhattarpur, New Delhi
                           </MDBCardText>
                         </MDBCol>
                         <MDBCol size="6" className="mb-3">
