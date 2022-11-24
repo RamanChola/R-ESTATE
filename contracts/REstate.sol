@@ -14,7 +14,7 @@ contract REstate is ERC721URIStorage {
     Counters.Counter private _propertyIds;
     Counters.Counter private _propertySold;
 
-    uint256 listPrice = 0.01 ether;
+    uint256 listPrice = 0.0000001 ether;
 
     constructor() ERC721("R-Estate", "RST") {
         owner = payable(msg.sender);
@@ -27,6 +27,7 @@ contract REstate is ERC721URIStorage {
         uint256 price;
         bool currentlyListed;
         string name;
+        string description;
     }
 
     modifier onlyOwner() {
@@ -57,7 +58,7 @@ contract REstate is ERC721URIStorage {
         return _propertyIds.current();
     }
 
-    function createToken(string memory tokenURI, uint256 price, string memory _name) public payable returns(uint){
+    function createToken(string memory tokenURI, uint256 price, string memory desc, string memory _name) public payable returns(uint){
         require(msg.value >= listPrice, "Send enough ether to list");
         require(price > 0, "Make sure the price ins't negative");
 
@@ -67,19 +68,20 @@ contract REstate is ERC721URIStorage {
 
         _setTokenURI(currentTokenId, tokenURI);
 
-        createListedProperty(currentTokenId, price, _name);
+        createListedProperty(currentTokenId, price, _name, desc);
 
         return currentTokenId;
     }
 
-    function createListedProperty(uint256 tokenId, uint256 price, string memory _name) private{
+    function createListedProperty(uint256 tokenId, uint256 price, string memory _name, string memory desc) private{
         idToListedProperty[tokenId] = ListedProperty(
             tokenId,
             payable(address(this)),
             payable(msg.sender),
             price,
             true,
-            _name
+            _name,
+            desc
         );
 
        _transfer(msg.sender, address(this), tokenId);
