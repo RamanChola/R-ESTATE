@@ -14,6 +14,7 @@ import MenuItem from "@mui/material/MenuItem";
 import ApartmentIcon from "@mui/icons-material/Apartment";
 import Link from "next/link";
 import ActiveLink from "./ActiveLink";
+import { useRouter } from "next/router";
 
 const pages = ["Buy", "Sell"];
 const settings = ["Dashboard"];
@@ -21,8 +22,17 @@ const settings = ["Dashboard"];
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-  const [isLoggedIn, setIsLogged] = React.useState(true);
+  const [isLoggedIn, setIsLogged] = React.useState(false);
+  const [currAddress, updateAddress] = React.useState("0x");
+  const router = useRouter();
 
+  async function getAddress() {
+    const ethers = require("ethers");
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    const signer = provider.getSigner();
+    const addr = await signer.getAddress();
+    updateAddress(addr);
+  }
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -37,6 +47,8 @@ function Navbar() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+
+  
 
   return (
     <AppBar position="static" style={{ backgroundColor: "black" }}>
@@ -134,7 +146,10 @@ function Navbar() {
 
           <Box sx={{ flexGrow: 0 }}>
             {!isLoggedIn ? (
-              <Button style={{ color: "black", backgroundColor: "#ffffff" }}>
+              <Button
+                // onClick={connectWebsite}
+                style={{ color: "black", backgroundColor: "#ffffff" }}
+              >
                 Connect your Wallet
               </Button>
             ) : (
