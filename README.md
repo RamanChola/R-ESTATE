@@ -1,7 +1,6 @@
 # R-ESTATE 🏢
 
-Our blockchain based portal that will allow people to  buy , sell and list their property without any paperwork. This will also allow people to change price of the property.
-
+Our blockchain based portal that will allow people to  buy , sell and list their property without any paperwork. 
 ## What  r-estate solves :-
 Disputed land is major problem lead to lack of transparency in real estate transactions making the real estate market inefficient. Listing of new projects/properties requires clarity on the ownership and landed cost.
 Any infrastructure created on land that is not encumbrance free can be potentially challenged in the future making investment in such projects risky.
