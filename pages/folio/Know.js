@@ -63,10 +63,9 @@ const Know = () => {
                   alt="..."
                 />
                 <MDBCardBody>
-                  <MDBCardTitle>Card title</MDBCardTitle>
+                  <MDBCardTitle>Ambience Tiverton</MDBCardTitle>
                   <MDBCardText>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    Ambience group Sector 50, New Delhi, India
                   </MDBCardText>
                 </MDBCardBody>
               </MDBCard>
@@ -104,7 +103,7 @@ const Know = () => {
                                 <p>
                                   <h3>
                                     <a href="#!" className="text-dark">
-                                      Antilia
+                                      Ambience
                                     </a>
                                   </h3>
                                 </p>
