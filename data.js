@@ -1,8 +1,8 @@
 const data = [
   {
-    title: "Lizard",
+    title: "Property",
     content:
-      "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+      "properties are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
     price: "$ 100",
     img:
       "https://www.pixelstalk.net/wp-content/uploads/2016/10/Beautiful-Building-Wallpaper-HD.jpg",

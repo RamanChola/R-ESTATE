@@ -16,7 +16,7 @@ import Link from "next/link";
 import ActiveLink from "./ActiveLink";
 import WalletConnect from "./WalletConnect";
 
-const pages = ["Buy", "Sell"];
+const pages = [ "Sell"];
 const settings = ["Dashboard"];
 
 function Navbar() {

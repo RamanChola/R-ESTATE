@@ -30,10 +30,10 @@ export default function ImgMediaCard({ data }) {
     // imageFetch(tokenId);
     
     const arr = [
-      "https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg",
-      "https://www.bhg.com/thmb/0Fg0imFSA6HVZMS2DFWPvjbYDoQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/white-modern-house-curved-patio-archway-c0a4a3b3-aa51b24d14d0464ea15d36e05aa85ac9.jpg",
-      "https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/wp-content/uploads/2021/08/download-7.jpg",
-      "https://q4g9y5a8.rocketcdn.me/wp-content/uploads/2020/02/home-banner-2020-02-min.jpg",
+      "https://cdn.discordapp.com/attachments/1010629869035589667/1119757169009623070/image.png",
+      "https://cdn.discordapp.com/attachments/1010629869035589667/1119758973604745327/image.png",
+      "https://cdn.discordapp.com/attachments/1010629869035589667/1119757996780699728/image.png",
+      "https://cdn.discordapp.com/attachments/1010629869035589667/1119758500411736155/image.png",
     ];
     let rand = Math.random() * arr.length;
     rand = Math.floor(rand);
