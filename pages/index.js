@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <Featured data={data} />
+      {/* <Featured data={data} /> */}
       <Body />
       <Footer />
     </>

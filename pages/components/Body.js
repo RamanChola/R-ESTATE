@@ -49,9 +49,10 @@ const Body = () => {
           justifyContent: "center",
           flexDirection: "column",
           alignItems: "center",
+          marginTop:"30px"
         }}
       >
-        <h1>Top Deals </h1>
+        <h1>Records </h1>
         <hr />
       </div>
 

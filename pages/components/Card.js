@@ -45,10 +45,10 @@ export default function ImgMediaCard({ data }) {
       <CardMedia
         component="img"
         alt="green iguana"
-        height="140"
+        height="100"
         image={image}
       />
-      <CardContent style={{ minHeight: "150px" }}>
+      <CardContent style={{ minHeight: "120px" }}>
         <Typography gutterBottom variant="h5" component="div">
           {data.name}
         </Typography>
@@ -56,16 +56,6 @@ export default function ImgMediaCard({ data }) {
           {data.description}
         </Typography>
       </CardContent>
-      <CardActions>
-        <p style={{ margin: "3px", fontWeight: "bold" }}>{data.price} ETH</p>
-        <Link
-          style={{ marginLeft: "auto", color: "black", fontWeight: "bold" }}
-          size="small"
-          href="/folio/Know"
-        >
-          Know More
-        </Link>
-      </CardActions>
     </Card>
   );
 }

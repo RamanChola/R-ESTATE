@@ -16,7 +16,7 @@ import Link from "next/link";
 import ActiveLink from "./ActiveLink";
 import WalletConnect from "./WalletConnect";
 
-const pages = [ "Sell"];
+const pages = [ "List Record"];
 const settings = ["Dashboard"];
 
 function Navbar() {
@@ -68,7 +68,7 @@ function Navbar() {
               textDecoration: "none",
             }}
           >
-            R-ESTATE
+            DRD-SOLUTION
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
